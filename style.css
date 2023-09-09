@@ -1,0 +1,1042 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700&family=Sacramento&display=swap');
+
+:root {
+  --font-normal: 'Jost', sans-serif;
+  --font-hand: 'Sacramento', cursive;
+
+  --clr-mint: #d3f5cf;
+  --clr-blue: rgb(168, 219, 250);
+  --clr-darkblue: rgb(99, 94, 226);
+
+  /* --clr1: #ffcdb2;
+  --clr2: #ffb4a2;
+  --clr3: #e5989b;
+  --clr4: #b5838d;
+  --clr5: #6d6875; */
+
+  --clr1: #cad2c5;
+  --clr2: #84a98c;
+  --clr3: #52796f;
+  --clr4: #354f52;
+  --clr5: #2f3e46;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  font-family: var(--font-normal);
+  background-color: var(--clr1);
+  overflow-x: hidden;
+}
+
+/*========================== NAVBAR ==========================*/
+#navbar {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  z-index: 90;
+}
+
+#navbar.sticky {
+  position: fixed;
+  top: 0;
+  background-color: rgba(47, 62, 70, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+#navbar #navbarMenu {
+  display: flex;
+  padding: 10px;
+  gap: 30px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar #navbarMenu li {
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+}
+
+#navbar.sticky #navbarMenu li {
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+#navbar #navbarMenu li a {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr5);
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar.sticky #navbarMenu li a {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr1);
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar #navbarMenu li a lord-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/*========================== HEADER ==========================*/
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  color: white;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, var(--clr1) 100%);
+  /* justify-content: center; */
+  align-items: center;
+}
+
+header .image-box {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+#jumbo1 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#countdown {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#countdown .day,
+#countdown .hour,
+#countdown .minute,
+#countdown .second {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+#countdown .number {
+  font-size: 3rem;
+  line-height: 1cm;
+}
+
+#countdown .text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#countdown .flower {
+  height: 100px;
+  margin-top: -40px;
+  margin-right: -30px;
+  filter: invert(100%);
+  transform: rotate(30deg);
+}
+
+#countdown .flower2 {
+  margin-right: 0;
+  margin-left: -30px;
+  transform: rotate(-30deg);
+}
+
+#flower {
+  width: 140px;
+  margin-top: 160px;
+  filter: invert(100%);
+}
+
+#subHeading1,
+#subHeading2,
+#subHeading3,
+#heading {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  text-align: center;
+}
+
+#subHeading1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 0.5;
+}
+
+#heading {
+  font-family: var(--font-hand);
+  font-size: 5rem;
+  word-spacing: 30px;
+}
+
+#subHeading2 {
+  font-family: var(--font-hand);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#subHeading3 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+#open {
+  margin-top: 40px;
+  padding: 15px 30px;
+  color: var(--clr5);
+  font-family: var(--font-normal);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: white;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#open:hover {
+  color: white;
+  background-color: var(--clr5);
+}
+
+/*========================== ACARA ==========================*/
+
+#acara {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  color: var(--clr5);
+  align-items: center;
+}
+
+#flowerHeader {
+  width: 200px;
+  height: 50px;
+  background-color: var(--clr2);
+  mask-image: url(images/flower.png);
+  mask-repeat: no-repeat;
+  mask-size: 100% auto;
+}
+
+#bismillah {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: var(--clr5);
+  mask-image: url(images/bismillah.png);
+  mask-repeat: no-repeat;
+  mask-size: 100% auto;
+}
+
+#acara .salam {
+  text-align: center;
+}
+
+#acara .prakata {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#acara .bride-info {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+}
+
+#acara .bride-info .col {
+  display: flex;
+  gap: 30px;
+}
+
+#acara .bride-info .col1,
+#acara .bride-info .col3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#acara .bride-info .profile-pic {
+  height: 200px;
+  width: 120px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: all 0.4s;
+}
+
+#acara .bride-info .profile-pic:hover {
+  scale: 1.2;
+}
+
+#acara .bride-info .col1 {
+  align-items: flex-end;
+  text-align: end;
+}
+
+#acara .bride-info .col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+#acara .bride-info .col2 .line {
+  width: 2px;
+  height: 60px;
+  background-color: #6d6875;
+}
+
+#acara .bride-info .col2 .separator {
+  font-family: var(--font-hand);
+  font-size: 3rem;
+  font-weight: bolder;
+  line-height: 0.8;
+}
+
+#acara .bride-info .name {
+  font-family: var(--font-hand);
+  font-size: 4rem;
+}
+
+#acara .rundown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 20px 30px;
+  margin-top: 60px;
+  background: linear-gradient(120deg, var(--clr4) -200%, white 50%, var(--clr4) 200%);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+#acara .rundown:hover {
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
+}
+
+#acara .rundown img {
+  position: absolute;
+  height: 100px;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+#acara .rundown h3.event {
+  margin-top: 30px;
+  font-family: var(--font-hand);
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+#acara .rundown h3.date {
+  color: var(--clr5);
+}
+
+#acara .location {
+  width: 500px;
+  padding: 20px;
+  padding-top: 0;
+  color: var(--clr1);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: var(--clr5);
+  border-radius: 0 0 60px 60px;
+  transform: translateY(-85px);
+  transition: all 0.8s ease-out;
+  z-index: 0;
+}
+
+#acara #gmap {
+  width: 90%;
+  height: 0;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+#map {
+  display: flex;
+  padding: 10px 20px;
+  margin-top: 20px;
+  gap: 10px;
+  color: var(--clr1);
+  font-family: var(--font-normal);
+  font-size: 1rem;
+  background-color: var(--clr5);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#map:hover {
+  background-color: var(--clr3);
+  box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.8);
+}
+
+#mapIcon {
+  width: 40px;
+  height: 40px;
+}
+
+/*========================== LOVE STORY ==========================*/
+
+#loveStory {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 60px;
+  margin-bottom: 50px;
+  background: linear-gradient(180deg, var(--clr1) 0%, white 50%, var(--clr1) 100%);
+  align-items: center;
+}
+
+#title {
+  color: var(--clr5);
+  font-family: var(--font-hand);
+  font-size: 2.4rem;
+}
+
+#subTitle {
+  width: 50%;
+  margin-bottom: 40px;
+  color: var(--clr5);
+  text-align: center;
+}
+
+#loveStory .story-card {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding: 0;
+  margin-bottom: 50px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+#loveStory .story-card .col1 {
+  height: 200px;
+  /* background-color: var(--clr2); */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+#loveStory .story-card .col1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.4;
+  filter: blur(4px);
+  transition: all 0.4s;
+}
+
+#loveStory .story-card .col2 {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr5);
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+  justify-content: center;
+}
+
+/*========================== GALLERY ==========================*/
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  align-items: center;
+}
+
+#gallery .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 80%;
+  justify-content: center;
+}
+
+#gallery .image-container .gallery-img {
+  width: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+#gallery .image-container .gallery-img:hover {
+  box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.6);
+  scale: 1.2;
+  transform: rotate(-5deg);
+}
+
+#galleryCarousel {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  z-index: 99;
+  overflow-x: hidden;
+}
+
+#galleryCarousel .image-container {
+  display: flex;
+  width: 100%;
+  padding-inline: 50%;
+  gap: 20px;
+  align-items: center;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+#galleryCarousel .image-container::-webkit-scrollbar {
+  display: none;
+}
+
+#galleryCarousel .image-container img {
+  width: 40vw;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: blur(4px);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#galleryCarousel .image-container img[active] {
+  filter: none;
+}
+
+#galleryCarousel .navigation {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  color: white;
+  font-size: 3rem;
+}
+
+#galleryCarousel .navigation .prev-btn,
+#galleryCarousel .navigation .next-btn,
+#galleryCarousel .navigation .close-btn {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#galleryCarousel .navigation .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#galleryCarousel .navigation .prev-btn:hover,
+#galleryCarousel .navigation .next-btn:hover,
+#galleryCarousel .navigation .close-btn:hover {
+  opacity: 1;
+}
+/*========================== COMMENTS ==========================*/
+
+#comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#comments #commentForm {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 600px;
+  gap: 10px;
+  align-items: center;
+}
+
+#comments input,
+#comments textarea {
+  width: 100%;
+  padding: 14px 10px;
+  color: var(--clr5);
+  font-family: var(--font-normal);
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  outline: none;
+  resize: none;
+  transition: all 0.4s;
+}
+
+#comments input:focus,
+#comments textarea:focus {
+  border: 2px solid var(--clr5);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+#submitBtn {
+  display: flex;
+  padding: 10px 20px;
+  margin-top: 20px;
+  gap: 10px;
+  color: var(--clr1);
+  font-family: var(--font-normal);
+  font-size: 1rem;
+  background-color: var(--clr5);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#submitBtn:hover {
+  background-color: var(--clr3);
+  box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.8);
+}
+
+#sendIcon {
+  width: 40px;
+  height: 40px;
+}
+
+#comments #commentSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-height: 80vh;
+  margin-block: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+#comments #commentSection .comments-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  gap: 20px;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+#comments #commentSection .filter-top {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, var(--clr1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#comments #commentSection .filter-bottom {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--clr1) 100%);
+}
+
+#comments #commentSection .comment-card {
+  background-color: white;
+  width: 20vw;
+  min-width: 300px;
+  height: fit-content;
+  padding: 20px;
+  color: var(--clr5);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+#comments #commentSection .comment-card .date-container {
+  display: flex;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--clr1);
+}
+
+#comments #commentSection .comment-card .date-container .date,
+#comments #commentSection .comment-card .date-container .time {
+  color: var(--clr5);
+  opacity: 0.4;
+}
+
+#comments #commentSection .comment-card .name {
+  margin-bottom: 10px;
+}
+
+#comments #commentSection .comment-card .comment {
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--clr1);
+}
+
+#comments #commentSection .comment-card .address {
+  color: var(--clr2);
+}
+
+/* MEDIA QUERY */
+
+/* Large */
+@media (max-width: 1200px) {
+  /*========================== GALLERY ==========================*/
+
+  #gallery .image-container {
+    width: 90%;
+  }
+}
+
+/* Medium */
+@media (max-width: 992px) {
+  /*========================== HEADER ==========================*/
+
+  #countdown .day,
+  #countdown .hour,
+  #countdown .minute,
+  #countdown .second {
+    width: 13vw;
+    min-width: 100px;
+    height: 13vw;
+    min-height: 100px;
+  }
+
+  #countdown .flower {
+    height: 10vw;
+  }
+
+  /*========================== ACARA ==========================*/
+
+  #acara .bride-info .profile-pic {
+    height: 20vw;
+    min-height: 100px;
+  }
+
+  #acara .bride-info .name {
+    font-family: var(--font-hand);
+    font-size: 6.5vw;
+  }
+
+  #acara .bride-info .child {
+    font-size: 1.9vw;
+  }
+
+  #acara .bride-info .address {
+    font-size: 1.7vw;
+  }
+
+  /*========================== GALLERY ==========================*/
+
+  #gallery .image-container {
+    width: 100%;
+  }
+
+  #gallery .image-container .gallery-img {
+    width: 40vw;
+    min-width: 300px;
+  }
+
+  /*========================== COMMENTS ==========================*/
+
+  #comments #commentSection {
+    width: 100%;
+  }
+}
+
+/* Small */
+@media (max-width: 768px) {
+  /*========================== HEADER ==========================*/
+
+  #countdown .day,
+  #countdown .hour,
+  #countdown .minute,
+  #countdown .second {
+    width: 13vw;
+    min-width: 80px;
+    height: 13vw;
+    min-height: 80px;
+  }
+
+  #countdown .flower {
+    height: 10vw;
+  }
+
+  #countdown .number {
+    font-size: 6vw;
+  }
+
+  #countdown .text {
+    font-size: 2.2vw;
+  }
+
+  #heading {
+    font-size: 10.4vw;
+  }
+
+  /*========================== ACARA ==========================*/
+
+  #acara .bride-info {
+    flex-direction: column;
+    padding: 40px 10px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #acara .bride-info .col2 {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #acara .bride-info .col2 .line {
+    width: 30vw;
+    height: 2px;
+  }
+
+  #acara .bride-info .profile-pic {
+    height: 160px;
+    min-height: none;
+  }
+
+  #acara .bride-info .name {
+    font-size: 3.2rem;
+  }
+
+  #acara .bride-info .child {
+    font-size: 1rem;
+  }
+
+  #acara .bride-info .address {
+    font-size: 0.9rem;
+  }
+
+  /*========================== LOVE STORY ==========================*/
+
+  #loveStory {
+    padding: 60px 10px;
+  }
+
+  #subTitle {
+    width: 80%;
+  }
+
+  #loveStory .story-card {
+    width: 80vw;
+  }
+
+  /*========================== GALLERY ==========================*/
+
+  #gallery .image-container .gallery-img {
+    min-width: 200px;
+  }
+
+  /*========================== COMMENTS ==========================*/
+
+  #comments #commentSection .comments-container {
+    padding: 60px 10px;
+  }
+
+  #comments #commentSection .comment-card {
+    width: 20vw;
+    min-width: 250px;
+  }
+}
+
+/* X-tra Small */
+@media (max-width: 576px) {
+  /*========================== HEADER ==========================*/
+  #countdown {
+    gap: 2vw;
+  }
+
+  #countdown .flower {
+    position: absolute;
+    height: 60px;
+    top: 200px;
+  }
+
+  #countdown .flower1 {
+    right: 55vw;
+  }
+
+  #countdown .flower2 {
+    left: 55vw;
+  }
+
+  #countdown .number {
+    font-size: 2.1rem;
+  }
+
+  #countdown .text {
+    font-size: 0.8rem;
+  }
+
+  #heading {
+    font-size: 9vw;
+  }
+
+  #subHeading1,
+  #subHeading3 {
+    font-size: 1.1rem;
+  }
+
+  /*========================== ACARA ==========================*/
+
+  #acara .bride-info .col {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #acara .bride-info .col1,
+  #acara .bride-info .col3 {
+    align-items: center;
+    text-align: center;
+  }
+
+  #acara .bride-info .col2 .line {
+    width: 20vw;
+  }
+
+  #acara .rundown {
+    width: 80vw;
+  }
+
+  #acara .rundown h3.date {
+    font-size: 1rem;
+  }
+
+  #acara .location {
+    width: 80vw;
+  }
+
+  /*========================== LOVE STORY ==========================*/
+
+  #subTitle {
+    font-size: 0.9rem;
+  }
+
+  /*========================== GALLERY ==========================*/
+
+  #gallery .image-container .gallery-img {
+    width: 80vw;
+    min-width: 200px;
+  }
+
+  /*========================== COMMENTS ==========================*/
+
+  #comments input,
+  #comments textarea {
+    font-size: 0.9rem;
+  }
+
+  #comments #commentSection {
+    width: 100%;
+    max-height: 80vh;
+    margin-bottom: 0;
+    background-color: white;
+    box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  #comments #commentSection .filter-top {
+    background: linear-gradient(180deg, white 50%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  #comments #commentSection .filter-bottom {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, white 100%);
+  }
+
+  #comments #commentSection .comments-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 60px 0;
+    gap: 0;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #comments #commentSection .comment-card {
+    width: 100%;
+    min-width: 300px;
+    height: fit-content;
+    padding: 20px;
+    color: var(--clr5);
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(47, 62, 70, 0.1);
+  }
+}

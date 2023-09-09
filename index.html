@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Nunung & Danang</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Animated Icon -->
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <header id="home">
+      <div class="image-box">
+        <img id="jumbo1" src="images/jumbo1.jpg" alt="jumbo1" />
+      </div>
+      <div id="countdown">
+        <img class="flower flower1" src="images/flower4.png" alt="flower3" />
+        <div class="day">
+          <div class="number"></div>
+          <div class="text">Hari</div>
+        </div>
+        <div class="hour">
+          <div class="number"></div>
+          <div class="text">Jam</div>
+        </div>
+        <div class="minute">
+          <div class="number"></div>
+          <div class="text">Menit</div>
+        </div>
+        <div class="second">
+          <div class="number"></div>
+          <div class="text">Detik</div>
+        </div>
+        <img class="flower flower2" src="images/flower5.png" alt="flower3" />
+      </div>
+      <h2 id="subHeading2">Menuju Perhelatan</h2>
+      <img id="flower" src="images/flower2.png" alt="flower" />
+      <h2 id="subHeading1">Perhelatan pernikahan dari:</h2>
+      <h1 id="heading">Danang & Nurbaety</h1>
+      <h2 id="subHeading3">Mengharapkan do'a dan restu dari Bpk/Ibu/Sdra/i.</h2>
+      <a id="open" onclick="{enableScroll()}" href="#acara">Buka Undangan</a>
+    </header>
+
+    <nav id="navbar">
+      <ul id="navbarMenu">
+        <li>
+          <a href="#home"
+            ><lord-icon src="https://cdn.lordicon.com/gmzxduhd.json" trigger="hover" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon><br />
+            Home</a
+          >
+        </li>
+        <li>
+          <a href="#acara"
+            ><lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="hover" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon><br />
+            Acara</a
+          >
+        </li>
+        <li>
+          <a href="#rundown"
+            ><lord-icon src="https://cdn.lordicon.com/zzcjjxew.json" trigger="hover" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon><br />
+            Lokasi</a
+          >
+        </li>
+        <li>
+          <a href="#loveStory"
+            ><lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" trigger="hover" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon><br />
+            Story</a
+          >
+        </li>
+        <li>
+          <a href="#gallery"
+            ><lord-icon src="https://cdn.lordicon.com/vixtkkbk.json" trigger="hover" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon><br />
+            Galeri</a
+          >
+        </li>
+        <li>
+          <a href="#comments"
+            ><lord-icon src="https://cdn.lordicon.com/zpxybbhl.json" trigger="hover" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon><br />
+            Ucapan</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section id="acara">
+      <div id="flowerHeader"></div>
+      <div id="bismillah"></div>
+      <h3 class="salam">Assalamu'alaikum Warohmatullahi Wabarokatuh</h3>
+      <p class="prakata">
+        Dengan memohon rahmat & ridho Allah SWT <br />
+        Kami memberi kabar kepada Bpk/Ibu/Sdra/i atas akan terlaksananya pernikahan
+      </p>
+
+      <div class="bride-info">
+        <div class="col">
+          <div class="col1">
+            <h1 class="name">Danang</h1>
+            <h3 class="child">Putra dari Bpk. Lasiman dan Ibu Elah Rohayati</h3>
+            <p class="address">Kaibon, Kec. Geger, Kab. Madiun, Jawa Tengah</p>
+          </div>
+          <div class="col1">
+            <img class="profile-pic" src="images/danang.jpg" alt="Danang" />
+          </div>
+        </div>
+        <div class="col2">
+          <div class="line"></div>
+          <h2 class="separator">&</h2>
+          <div class="line"></div>
+        </div>
+        <div class="col">
+          <div class="col3">
+            <img class="profile-pic" src="images/nunung.jpg" alt="Nurbaety" />
+          </div>
+          <div class="col3">
+            <h1 class="name">Nurbaety</h1>
+            <h3 class="child">Putri dari Bpk. Slamet dan Ibu Eni Setyowati</h3>
+            <p class="address">Mengori, Kec. Pemalang, Kab. Pemalang, Jawa Tengah</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="prakata">Yang inshaallah akan dilaksanakan pada</p>
+
+      <div id="rundown" class="rundown">
+        <img src="images/flower6.png" alt="flowerBucket" />
+        <h3 class="event">Akad Nikah</h3>
+        <h3 class="date">Senin, 23 Oktober 2023</h3>
+        <button id="map" onclick="{toggleLocation()}">
+          Lihat Lokasi
+          <lord-icon id="mapIcon" src="https://cdn.lordicon.com/zzcjjxew.json" trigger="loop" stroke="100" colors="primary:#cad2c5,secondary:#84a98c"></lord-icon>
+        </button>
+      </div>
+
+      <div class="location">
+        <iframe
+          id="gmap"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15842.77717970461!2d109.35759076120307!3d-6.927097588005745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fc4b060748f81%3A0x648c4c6e7c1a93bf!2sMengori%2C%20Kec.%20Pemalang%2C%20Kabupaten%20Pemalang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1693972475557!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="address-tab">Mengori, Kec. Pemalang, Kab. Pemalang, Jawa Tengah</p>
+      </div>
+    </section>
+
+    <section id="loveStory">
+      <h1 id="title">Love Story</h1>
+      <p id="subTitle">Dibawah ini terlampir sepotong perjalanan kisah cinta kami berdua. Dua insan yang awalnya tidak saling mengenal, dan dipertemukan oleh takdir.</p>
+
+      <div class="story-card">
+        <div class="col1">
+          <img src="images/story1.jpg" alt="image story" />
+        </div>
+        <div class="col2">
+          <h3 class="date">Awal Semester 2 (2019)</h3>
+          <p class="story">Pertama kali bertemu di Praktikum Sensor dan Transduser, waktu itu kita berdua satu kelompok dan beberapa mata kuliah praktikum lain kami juga bertemu namun sebagai praktikan dan asisten dosen</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="col1">
+          <img src="images/story2.jpg" alt="image story" />
+        </div>
+        <div class="col2">
+          <h3 class="date">November 2019</h3>
+          <p class="story">Beberapa kali satu kelas dan akhirnya sering chat untuk menanyakan tugas, lama-lama kami jadi makin dekat dan sering makan bersama entah itu istirahat atau sepulang kuliah</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="col1">
+          <img src="images/story3.jpg" alt="image story" />
+        </div>
+        <div class="col2">
+          <h3 class="date">Januari 2020</h3>
+          <p class="story">Akhirnya kami memutuskan utk saling berkomitmen satu sama lain dan saling berjuang bersama</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="col1">
+          <img src="images/story4.jpg" alt="image story" />
+        </div>
+        <div class="col2">
+          <h3 class="date">2021 - 2022</h3>
+          <p class="story">Jarak dan waktu saling memisahkan kita tapi dengan kemantapan hati kami bisa melalui tahun tahun ini dengan tetap bersama</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="col1">
+          <img src="images/story5.jpg" alt="image story" />
+        </div>
+        <div class="col2">
+          <h3 class="date">Januari 2023</h3>
+          <p class="story">Kami memutuskan utk membawa hubungan kami berdua kejenjang yang lebih serius yaitu pernikahan</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="col1">
+          <img src="images/story6.jpg" alt="image story" />
+        </div>
+        <div class="col2">
+          <h3 class="date">Oktober 2023</h3>
+          <p class="story">Kami akan melangsungkan ikatan pernikahan yang telah lama kami harapkan</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h1 id="title">Gallery</h1>
+      <p id="subTitle">Beberapa potongan dokumentasi kebersamaan kami berdua.</p>
+
+      <div class="image-container">
+        <img src="images/1.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/2.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/3.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/4.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/5.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/6.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/7.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/8.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/9.jpg" alt="gallery_image" class="gallery-img" />
+        <img src="images/10.jpg" alt="gallery_image" class="gallery-img" />
+      </div>
+    </section>
+
+    <section id="galleryCarousel">
+      <div class="image-container">
+        <img src="images/1.jpg" alt="gallery image" class="carousel-images" active />
+        <img src="images/2.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/3.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/4.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/5.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/6.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/7.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/8.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/9.jpg" alt="gallery image" class="carousel-images" />
+        <img src="images/10.jpg" alt="gallery image" class="carousel-images" />
+      </div>
+
+      <div class="navigation">
+        <i class="bi bi-arrow-left-circle-fill prev-btn"></i>
+        <i class="bi bi-arrow-right-circle-fill next-btn"></i>
+        <i class="bi bi-x-circle-fill close-btn"></i>
+      </div>
+    </section>
+
+    <section id="comments">
+      <h1 id="title">Ucapan & Do'a</h1>
+      <p id="subTitle">Kami sekeluarga mengucapkan terimakasih atas ucapan dan do'a yang telah anda berikan. Maaf jika kami tidak dapat membalas ucapan anda satu-persatu, semoga Allah SWT memberikan kemurahan kembali kepada anda.</p>
+
+      <form id="commentForm">
+        <input id="name" type="text" placeholder="Nama lengkap anda" />
+        <input id="address" type="text" placeholder="Alamat tempat tinggal anda (opsional)" />
+        <textarea id="comment" cols="30" rows="10" placeholder="Tuliskan ucapan dan do'a kepada kedua mempelai..."></textarea>
+        <button id="submitBtn">
+          Kirim Ucapan
+          <lord-icon id="sendIcon" src="https://cdn.lordicon.com/nkmsrxys.json" trigger="loop" stroke="100" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon>
+          <!-- src="https://cdn.lordicon.com/xjovhxra.json" -->
+        </button>
+      </form>
+
+      <div id="commentSection">
+        <div class="filter-top"></div>
+        <div class="comments-container"></div>
+        <div class="filter-bottom"></div>
+      </div>
+    </section>
+
+    <!-- Firebase auth script -->
+    <script type="module" src="environment.js"></script>
+
+    <!-- Firebase auth script -->
+    <script type="module" src="firebase.js"></script>
+
+    <!-- page original script -->
+    <script src="index.js"></script>
+  </body>
+</html>
