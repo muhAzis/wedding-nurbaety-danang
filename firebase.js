@@ -33,7 +33,7 @@ const getData = async () => {
     }
 
     const dataComments = Object.keys(data.val()).map((key) => data.val()[key]);
-    // dataComments.sort((a, b) => a.issued - b.issued);
+    dataComments.sort((a, b) => a.issued - b.issued);
 
     commentsContainer.innerHTML = '';
     dataComments.forEach((data) => {
