@@ -16,32 +16,36 @@
       <div class="image-box">
         <img id="jumbo1" src="images/jumbo1.jpg" alt="jumbo1" />
       </div>
-      <div id="countdown">
-        <img class="flower flower1" src="images/flower4.png" alt="flower3" />
-        <div class="day">
-          <div class="number"></div>
-          <div class="text">Hari</div>
+      <div class="row1 row">
+        <div id="countdown">
+          <img class="flower flower1" src="images/flower4.png" alt="flower3" />
+          <div class="day">
+            <div class="number"></div>
+            <div class="text">Hari</div>
+          </div>
+          <div class="hour">
+            <div class="number"></div>
+            <div class="text">Jam</div>
+          </div>
+          <div class="minute">
+            <div class="number"></div>
+            <div class="text">Menit</div>
+          </div>
+          <div class="second">
+            <div class="number"></div>
+            <div class="text">Detik</div>
+          </div>
+          <img class="flower flower2" src="images/flower5.png" alt="flower3" />
         </div>
-        <div class="hour">
-          <div class="number"></div>
-          <div class="text">Jam</div>
-        </div>
-        <div class="minute">
-          <div class="number"></div>
-          <div class="text">Menit</div>
-        </div>
-        <div class="second">
-          <div class="number"></div>
-          <div class="text">Detik</div>
-        </div>
-        <img class="flower flower2" src="images/flower5.png" alt="flower3" />
+        <h2 id="subHeading2">Menuju Perhelatan</h2>
       </div>
-      <h2 id="subHeading2">Menuju Perhelatan</h2>
-      <img id="flower" src="images/flower2.png" alt="flower" />
-      <h2 id="subHeading1">Perhelatan pernikahan dari:</h2>
-      <h1 id="heading">Danang & Nurbaety</h1>
-      <h2 id="subHeading3">Mengharapkan do'a dan restu dari Bpk/Ibu/Sdra/i.</h2>
-      <a id="open" href="#acara">Buka Undangan</a>
+      <div class="row2 row">
+        <img id="flower" src="images/flower2.png" alt="flower" />
+        <h2 id="subHeading1">Perhelatan pernikahan dari:</h2>
+        <h1 id="heading">Danang & Nurbaety</h1>
+        <h2 id="subHeading3">Mengharapkan do'a dan restu dari Bpk/Ibu/Sdra/i.</h2>
+        <a id="open" href="#acara">Buka Undangan</a>
+      </div>
     </header>
 
     <nav id="navbar">
@@ -128,7 +132,7 @@
         <img src="images/flower6.png" alt="flowerBucket" />
         <h3 class="event">Akad Nikah</h3>
         <h3 class="date">Senin, 23 Oktober 2023</h3>
-        <button id="map" onclick="{toggleLocation()}">
+        <button id="map">
           Lihat Lokasi
           <lord-icon id="mapIcon" src="https://cdn.lordicon.com/zzcjjxew.json" trigger="loop" stroke="100" colors="primary:#cad2c5,secondary:#84a98c"></lord-icon>
         </button>
@@ -266,6 +270,16 @@
         <div class="filter-bottom"></div>
       </div>
     </section>
+
+    <div id="audio-container">
+      <audio id="BGM" autoplay loop>
+        <source src="public/taylor-swiftfeated-sheeran-everything-has-changed.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="icon-container">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
 
     <!-- page original script -->
     <script type="module" src="index.js"></script>

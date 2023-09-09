@@ -33,7 +33,7 @@ const getData = async () => {
     }
 
     const dataComments = Object.keys(data.val()).map((key) => data.val()[key]);
-    dataComments.sort((a, b) => a.issued < b.issued); //sort by latest posting date
+    dataComments.sort((a, b) => (a.issued < b.issued ? 1 : -1)); //sort by latest posting date
 
     commentsContainer.innerHTML = '';
     dataComments.forEach((data) => {

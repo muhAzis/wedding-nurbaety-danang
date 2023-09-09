@@ -39,6 +39,11 @@ body {
   overflow-x: hidden;
 }
 
+body.disable-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
 /*========================== NAVBAR ==========================*/
 #navbar {
   display: flex;
@@ -111,7 +116,7 @@ header {
   padding: 30px;
   color: white;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, var(--clr1) 100%);
-  /* justify-content: center; */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -132,6 +137,17 @@ header .image-box {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+header .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .row2 {
+  margin-bottom: 10vh;
 }
 
 #countdown {
@@ -257,6 +273,7 @@ header .image-box {
   height: 50px;
   background-color: var(--clr2);
   mask-image: url(images/flower.png);
+  -webkit-mask-image: url(images/flower.png);
   mask-repeat: no-repeat;
   mask-size: 100% auto;
 }
@@ -268,6 +285,7 @@ header .image-box {
   margin-bottom: 20px;
   background-color: var(--clr5);
   mask-image: url(images/bismillah.png);
+  -webkit-mask-image: url(images/bismillah.png);
   mask-repeat: no-repeat;
   mask-size: 100% auto;
 }
@@ -689,6 +707,12 @@ header .image-box {
   gap: 20px;
   justify-content: center;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#comments #commentSection .comments-container::-webkit-scrollbar {
+  display: none;
 }
 
 #comments #commentSection .filter-top {
@@ -747,6 +771,43 @@ header .image-box {
 
 #comments #commentSection .comment-card .address {
   color: var(--clr2);
+}
+
+/*========================== AUDIO ==========================*/
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#audio-container .icon-container {
+  position: fixed;
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  bottom: 2.5rem;
+  right: 2rem;
+  color: white;
+  line-height: 0;
+  opacity: 0.5;
+  transition: all 0.2s;
+  animation: rotate 4s linear infinite;
+  mix-blend-mode: difference;
+  transform-origin: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#audio-container .icon-container:hover {
+  opacity: 1;
+  animation-play-state: paused;
 }
 
 /* MEDIA QUERY */
