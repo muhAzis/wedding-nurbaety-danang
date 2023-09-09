@@ -46,7 +46,9 @@ setInterval(() => {
 
 // TOGGLE MUSIC
 music.volume = 0.1;
-music.play();
+window.onload = () => {
+  music.play();
+};
 let isPlaying = true;
 
 toggleMusicBtn.addEventListener('click', () => {
