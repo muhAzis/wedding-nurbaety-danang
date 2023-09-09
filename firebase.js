@@ -1,12 +1,11 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
 import { getDatabase, ref, get, set, child, update, remove } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js';
-// import { process } from './environment.js';
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.SECRET_API_KEY,
-  authDomain: process.env.SECRET_AUTH_DOMAIN,
-  databaseURL: process.env.SECRET_DB_URL,
+  apiKey: import.meta.env.VITE_SECRET_API_KEY,
+  authDomain: import.meta.env.VITE_SECRET_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_SECRET_DB_URL,
   projectId: 'weddingweb-89681',
   storageBucket: 'weddingweb-89681.appspot.com',
   messagingSenderId: '295396365536',
