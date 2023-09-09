@@ -1,6 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
 import { getDatabase, ref, get, set, child, update, remove } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js';
-import { process } from './environment.js';
+// import { process } from './environment.js';
 
 // Firebase configuration
 const firebaseConfig = {
