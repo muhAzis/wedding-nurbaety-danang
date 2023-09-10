@@ -123,6 +123,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const enableScroll = () => {
     document.body.classList.remove('disable-scroll');
     music.play();
+    music.play();
     isPlaying = true;
     musicIcon.classList.remove('bi-pause-circle');
     musicIcon.classList.add('bi-disc');
