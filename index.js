@@ -2,8 +2,6 @@ import './style.css';
 import './firebase.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('web loaded completely');
-
   const loadingPage = document.getElementById('loadingPage');
 
   const day = document.querySelector('#countdown .day .number');
@@ -52,8 +50,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // TOGGLE MUSIC
   music.volume = 0.1;
-  music.play();
-  let isPlaying = true;
+  let isPlaying;
+
+  loadingPage.style.display = 'none';
+
+  document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      music.play();
+      isPlaying = true;
+
+      setTimeout(() => {
+        loadingPage.style.display = 'none';
+      }, 2000);
+      loadingPage.style.opacity = 0;
+    }
+  };
 
   toggleMusicBtn.addEventListener('click', () => {
     if (isPlaying) {
@@ -240,6 +251,4 @@ window.addEventListener('DOMContentLoaded', () => {
   closeBtn.addEventListener('click', () => {
     carouselContainer.style.display = 'none';
   });
-
-  loadingPage.style.display = 'none';
 });
