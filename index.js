@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const eventContainer = document.querySelector('#acara .rundown');
   const addressTab = document.querySelector('#acara .location');
   const googleMap = document.querySelector('#acara .location #gmap');
+  const addressText = document.querySelector('#acara .location .address-tab');
   const mapBtn = document.getElementById('map');
 
   const navbar = document.querySelector('#navbar');
@@ -151,10 +152,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (addressTab.style.paddingTop != '100px' || addressTab.style.paddingTop == '') {
       addressTab.style.paddingTop = '100px';
-      googleMap.style.height = '180px';
+      googleMap.style.maxHeight = '180px';
+      addressText.style.maxHeight = '50px';
     } else {
       addressTab.style.paddingTop = '20px';
-      googleMap.style.height = 0;
+      googleMap.style.maxHeight = 0;
+      addressText.style.maxHeight = 0;
     }
   };
 
@@ -163,22 +166,33 @@ window.addEventListener('DOMContentLoaded', () => {
   // STORY ANIMATION ON-SCROLL
   window.addEventListener('scroll', () => {
     storyCardContainer.forEach((item, i) => {
-      if (item.getBoundingClientRect().top >= 100 && item.getBoundingClientRect().top <= 700) {
+      if (item.getBoundingClientRect().top >= 50 && item.getBoundingClientRect().top <= window.innerHeight - 50) {
         item.style.padding = '20px';
-        storyImgContainer[i].style.height = '350px';
+        storyImgContainer[i].style.maxHeight = '350px';
         storyImg[i].style.opacity = 1;
         storyImg[i].style.filter = 'blur(0)';
-        storyDesc[i].style.height = '120px';
+        storyDesc[i].style.maxHeight = '500px';
+        storyDesc[i].style.paddingBlock = '20px';
       } else {
         item.style.padding = 0;
-        storyImgContainer[i].style.height = '200px';
+        storyImgContainer[i].style.maxHeight = '200px';
         storyImg[i].style.opacity = 0.4;
         storyImg[i].style.filter = 'blur(4px)';
-        storyDesc[i].style.height = 0;
+        storyDesc[i].style.maxHeight = 0;
+        storyDesc[i].style.paddingBlock = 0;
       }
     });
 
     stickyNavbar();
+  });
+
+  storyCardContainer.forEach((item) => {
+    item.addEventListener('click', () => {
+      item.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    });
   });
 
   // CAROUSEL CONFIGURATION
@@ -196,9 +210,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const scaleImage = () => {
     carouselImages.forEach((image) => {
       if (image.hasAttribute('active')) {
-        image.style.width = '45vw';
+        image.style.maxWidth = '1000px';
       } else {
-        image.style.width = '40vw';
+        image.style.maxWidth = '800px';
       }
     });
   };

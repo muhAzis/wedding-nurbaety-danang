@@ -455,9 +455,14 @@ header .row2 {
   z-index: 0;
 }
 
+#acara .location .address-tab {
+  max-height: 0;
+  transition: all 0.4s;
+}
+
 #acara #gmap {
   width: 90%;
-  height: 0;
+  max-height: 0;
   margin-bottom: 10px;
   border: none;
   border-radius: 20px;
@@ -528,11 +533,12 @@ header .row2 {
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: all 0.4s;
+  cursor: pointer;
 }
 
 #loveStory .story-card .col1 {
-  height: 200px;
-  /* background-color: var(--clr2); */
+  height: 50vw;
+  max-height: 200px;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.4s;
@@ -552,7 +558,7 @@ header .row2 {
   display: flex;
   flex-direction: column;
   color: var(--clr5);
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   transition: all 0.4s;
   justify-content: center;
@@ -621,7 +627,8 @@ header .row2 {
 }
 
 #galleryCarousel .image-container img {
-  width: 40vw;
+  width: 80vw;
+  max-width: 1000px;
   object-fit: cover;
   border-radius: 20px;
   filter: blur(4px);
