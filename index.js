@@ -111,7 +111,11 @@ window.addEventListener('DOMContentLoaded', () => {
         item.removeAttribute('colors');
         item.setAttribute('colors', 'primary:#2f3e46,secondary:#84a98c');
       });
-      eventOuterContainer.style.paddingTop = '113px';
+      if (window.innerWidth <= 768) {
+        eventOuterContainer.style.paddingTop = '70px';
+      } else {
+        eventOuterContainer.style.paddingTop = '113px';
+      }
     } else {
       navbar.classList.remove('sticky');
       menuIcons.forEach((item) => {
