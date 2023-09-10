@@ -21,6 +21,7 @@ const nameForm = document.getElementById('name');
 const addressForm = document.getElementById('address');
 const commentForm = document.getElementById('comment');
 const submitForm = document.getElementById('submitBtn');
+const submitIcon = document.querySelector('#submitBtn lord-icon');
 const commentsContainer = document.querySelector('#comments #commentSection .comments-container');
 
 // Get data from Firebase
@@ -34,7 +35,6 @@ const getData = async () => {
 
     const dataComments = Object.keys(data.val()).map((key) => data.val()[key]);
     dataComments.sort((a, b) => (a.issued < b.issued ? 1 : -1)); //sort by latest posting date
-    // console.log(dataComments);
 
     commentsContainer.innerHTML = '';
     dataComments.forEach((data) => {
@@ -64,6 +64,8 @@ setInterval(() => {
 // Insert to Firebase
 const insertData = async () => {
   const date = new Date().getTime();
+  submitIcon.removeAttribute('src');
+  submitIcon.setAttribute('src', 'https://cdn.lordicon.com/xjovhxra.json');
   await set(ref(db, 'comments/' + nameForm.value), {
     name: nameForm.value,
     address: addressForm.value,
@@ -71,6 +73,8 @@ const insertData = async () => {
     issued: new Date(date).toString(),
   })
     .then(() => {
+      submitIcon.removeAttribute('src');
+      submitIcon.setAttribute('src', 'https://cdn.lordicon.com/nkmsrxys.json');
       alert('Ucapan anda berhasil dikirim!');
       nameForm.value = '';
       addressForm.value = '';
