@@ -311,8 +311,8 @@ header .row2 {
   width: 200px;
   height: 50px;
   background-color: var(--clr2);
-  mask-image: url(images/flower.png);
-  -webkit-mask-image: url(images/flower.png);
+  mask-image: url(public/images/flower.png);
+  -webkit-mask-image: url(public/images/flower.png);
   mask-repeat: no-repeat;
   mask-size: 100% auto;
 }
@@ -323,8 +323,8 @@ header .row2 {
   margin-top: 50px;
   margin-bottom: 20px;
   background-color: var(--clr5);
-  mask-image: url(images/bismillah.png);
-  -webkit-mask-image: url(images/bismillah.png);
+  mask-image: url(public/images/bismillah.png);
+  -webkit-mask-image: url(public/images/bismillah.png);
   mask-repeat: no-repeat;
   mask-size: 100% auto;
 }
