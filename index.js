@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', () => {
   console.log('web loaded completely');
 
   const loadingPage = document.getElementById('loadingPage');
-  loadingPage.style.display = 'none';
 
   const day = document.querySelector('#countdown .day .number');
   const hour = document.querySelector('#countdown .hour .number');
@@ -241,4 +240,6 @@ window.addEventListener('DOMContentLoaded', () => {
   closeBtn.addEventListener('click', () => {
     carouselContainer.style.display = 'none';
   });
+
+  loadingPage.style.display = 'none';
 });
