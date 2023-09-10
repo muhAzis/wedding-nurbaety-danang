@@ -4,6 +4,7 @@ import './firebase.js';
 window.addEventListener('DOMContentLoaded', () => {
   const loadingPage = document.getElementById('loadingPage');
   const flowerAnimation = document.querySelectorAll('header .flower-animation');
+  const jumbotron = document.querySelector('header #jumbo1');
 
   const day = document.querySelector('#countdown .day .number');
   const hour = document.querySelector('#countdown .hour .number');
@@ -52,6 +53,13 @@ window.addEventListener('DOMContentLoaded', () => {
     minute.innerHTML = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
     second.innerHTML = Math.floor((remainingTime % (1000 * 60)) / 1000);
   }, 1000);
+
+  // JUMBOTRON IMAGE RESPONSIVE
+  if (window.innerWidth <= 470) {
+    jumbotron.setAttribute('src', 'images/jumbo2.jpg');
+  } else {
+    jumbotron.setAttribute('src', 'images/jumbo1.jpg');
+  }
 
   // FLOWER ANIMATION CONTROL ONLOAD
   const flowerAnimate = () => {
