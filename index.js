@@ -3,6 +3,7 @@ import './firebase.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   const loadingPage = document.getElementById('loadingPage');
+  const flowerAnimation = document.querySelectorAll('header .flower-animation');
 
   const day = document.querySelector('#countdown .day .number');
   const hour = document.querySelector('#countdown .hour .number');
@@ -52,6 +53,32 @@ window.addEventListener('DOMContentLoaded', () => {
     second.innerHTML = Math.floor((remainingTime % (1000 * 60)) / 1000);
   }, 1000);
 
+  // FLOWER ANIMATION CONTROL ONLOAD
+  const flowerAnimate = () => {
+    flowerAnimation.forEach((item, i) => {
+      switch (i) {
+        case 0:
+          item.style.top = '-1rem';
+          item.style.left = '-2.3rem';
+          break;
+        case 1:
+          item.style.top = '-1rem';
+          item.style.right = '-2.3rem';
+          break;
+        case 2:
+          item.style.bottom = 0;
+          item.style.left = 0;
+          break;
+        case 3:
+          item.style.bottom = 0;
+          item.style.right = 0;
+          break;
+        default:
+          break;
+      }
+    });
+  };
+
   // TOGGLE MUSIC
   music.volume = 0.1;
   let isPlaying;
@@ -66,6 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
           loadingPage.style.display = 'none';
         }, 2000);
         loadingPage.style.opacity = 0;
+        flowerAnimate();
       }
     }, 3000);
   };
