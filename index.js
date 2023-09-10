@@ -21,6 +21,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('#navbar');
   const navbarTop = navbar.offsetTop;
   const menuIcons = document.querySelectorAll('#navbar #navbarMenu lord-icon');
+  const menuContainer = document.querySelector('#navbar #navbarMenu');
+  const menuList = document.querySelectorAll('#navbar #navbarMenu li');
+  const hamburgerMenu = document.getElementById('hamburgerMenu');
 
   const storyCardContainer = document.querySelectorAll('#loveStory .story-card');
   const storyImgContainer = document.querySelectorAll('#loveStory .story-card .col1');
@@ -94,6 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
     isPlaying = true;
     musicIcon.classList.remove('bi-pause-circle');
     musicIcon.classList.add('bi-disc');
+    toggleMusicBtn.style.animationPlayState = 'running';
   };
 
   openBtn.addEventListener('click', enableScroll);
@@ -104,7 +108,7 @@ window.addEventListener('DOMContentLoaded', () => {
       navbar.classList.add('sticky');
       menuIcons.forEach((item) => {
         item.removeAttribute('colors');
-        item.setAttribute('colors', 'primary:#cad2c5,secondary:#84a98c');
+        item.setAttribute('colors', 'primary:#2f3e46,secondary:#84a98c');
       });
       eventOuterContainer.style.paddingTop = '113px';
     } else {
@@ -116,6 +120,30 @@ window.addEventListener('DOMContentLoaded', () => {
       eventOuterContainer.style.paddingTop = '20px';
     }
   };
+
+  // HAMBURGER MENU NAVBAR
+  let isHide = true;
+  hamburgerMenu.addEventListener('click', () => {
+    if (isHide) {
+      menuContainer.style.transform = 'translateX(0)';
+      menuContainer.style.opacity = 1;
+    } else {
+      menuContainer.style.transform = 'translateX(100%)';
+      menuContainer.style.opacity = 0;
+    }
+
+    isHide = !isHide;
+  });
+
+  if (window.innerWidth <= 768) {
+    menuList.forEach((menu) => {
+      menu.addEventListener('click', () => {
+        menuContainer.style.transform = 'translateX(100%)';
+        menuContainer.style.opacity = 0;
+        isHide = true;
+      });
+    });
+  }
 
   // TOGGLE LOCATION TAB FOR BUTTON
   const toggleLocation = () => {
