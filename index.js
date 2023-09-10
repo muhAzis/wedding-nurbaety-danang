@@ -52,18 +52,18 @@ window.addEventListener('DOMContentLoaded', () => {
   music.volume = 0.1;
   let isPlaying;
 
-  loadingPage.style.display = 'none';
-
   document.onreadystatechange = () => {
-    if (document.readyState === 'complete') {
-      music.play();
-      isPlaying = true;
+    setTimeout(() => {
+      if (document.readyState === 'complete') {
+        music.play();
+        isPlaying = true;
 
-      setTimeout(() => {
-        loadingPage.style.display = 'none';
-      }, 2000);
-      loadingPage.style.opacity = 0;
-    }
+        setTimeout(() => {
+          loadingPage.style.display = 'none';
+        }, 2000);
+        loadingPage.style.opacity = 0;
+      }
+    }, 3000);
   };
 
   toggleMusicBtn.addEventListener('click', () => {
