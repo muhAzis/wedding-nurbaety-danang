@@ -1246,6 +1246,7 @@ header .row2 {
   }
 
   #countdown .flower {
+    display: none;
     position: absolute;
     height: 60px;
     top: 190px;

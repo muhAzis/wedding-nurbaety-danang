@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // JUMBOTRON IMAGE RESPONSIVE
   if (window.innerWidth <= 576) {
-    jumbotron.setAttribute('src', 'images/jumbo2.jpg');
+    jumbotron.setAttribute('src', 'images/jumbo3.jpg');
   } else {
     jumbotron.setAttribute('src', 'images/jumbo1.jpg');
   }
