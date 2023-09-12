@@ -591,6 +591,14 @@ header .row2 {
   color: var(--clr5);
 }
 
+#acara .rundown p.time {
+  width: 100%;
+  margin-top: 6px;
+  padding-block: 6px;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(202, 210, 197, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
 #acara .location {
   width: 500px;
   padding: 20px;

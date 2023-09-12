@@ -17,6 +17,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 
 // Form elements
+const form = document.getElementById('commentForm');
 const nameForm = document.getElementById('name');
 const addressForm = document.getElementById('address');
 const commentForm = document.getElementById('comment');
@@ -64,12 +65,18 @@ setInterval(() => {
 // Insert to Firebase
 const insertData = async () => {
   const date = new Date().getTime();
+
   submitIcon.removeAttribute('src');
   submitIcon.setAttribute('src', 'https://cdn.lordicon.com/xjovhxra.json');
+
+  const name = nameForm.value ? nameForm.value : 'Random User';
+  const address = addressForm.value ? addressForm.value : 'Random Address';
+  const comment = commentForm.value ? commentForm.value : 'Lorem ipsum dolor sit amet amet jabang bayi';
+
   await set(ref(db, 'comments/' + nameForm.value), {
-    name: nameForm.value,
-    address: addressForm.value,
-    comment: commentForm.value,
+    name,
+    address,
+    comment,
     issued: new Date(date).toString(),
   })
     .then(() => {
@@ -87,7 +94,7 @@ const insertData = async () => {
     });
 };
 
-submitForm.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   insertData();

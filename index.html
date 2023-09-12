@@ -146,6 +146,7 @@
         <img src="images/flower6.png" alt="flowerBucket" />
         <h3 class="event">Akad Nikah</h3>
         <h3 class="date">Sabtu, 7 Oktober 2023</h3>
+        <p class="time">08:00 WIB ~ Selesai</p>
         <button id="map">
           Lihat Lokasi
           <lord-icon id="mapIcon" src="https://cdn.lordicon.com/zzcjjxew.json" trigger="loop" stroke="100" colors="primary:#cad2c5,secondary:#84a98c"></lord-icon>
@@ -268,10 +269,10 @@
       <p id="subTitle">Kami sekeluarga mengucapkan terimakasih atas ucapan dan do'a yang telah anda berikan. Maaf jika kami tidak dapat membalas ucapan anda satu-persatu, semoga Allah SWT memberikan kemurahan-Nya kembali kepada anda.</p>
 
       <form id="commentForm">
-        <input id="name" type="text" placeholder="Nama lengkap anda" />
-        <input id="address" type="text" placeholder="Alamat tempat tinggal anda (opsional)" />
-        <textarea id="comment" cols="30" rows="10" placeholder="Tuliskan ucapan dan do'a kepada kedua mempelai..."></textarea>
-        <button id="submitBtn">
+        <input id="name" type="text" placeholder="Nama lengkap anda" required />
+        <input id="address" type="text" placeholder="Alamat tempat tinggal anda" required />
+        <textarea id="comment" cols="30" rows="10" placeholder="Tuliskan ucapan dan do'a kepada kedua mempelai..." required></textarea>
+        <button id="submitBtn" type="submit">
           Kirim Ucapan
           <lord-icon id="sendIcon" src="https://cdn.lordicon.com/nkmsrxys.json" trigger="loop" stroke="100" colors="primary:#cad2c5,secondary:#84a98c"> </lord-icon>
         </button>
