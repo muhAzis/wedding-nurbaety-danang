@@ -58,9 +58,10 @@ const getData = async () => {
   });
 };
 
-setInterval(() => {
-  getData();
-}, 1000);
+// setInterval(() => {
+//   getData();
+// }, 1000);
+getData();
 
 // Insert to Firebase
 const insertData = async () => {

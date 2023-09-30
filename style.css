@@ -123,6 +123,7 @@ body.disable-scroll {
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #navbar.sticky #navbarMenu li a {
@@ -977,6 +978,68 @@ header .row2 {
 
 #comments #commentSection .comment-card .address {
   color: var(--clr2);
+}
+
+/*========================== INFO ==========================*/
+#info {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+#info.show {
+  display: flex;
+}
+
+#info .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 3rem;
+  opacity: 0.5;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#info .close-btn:hover {
+  opacity: 1;
+}
+
+#info p {
+  max-width: 700px;
+  color: white;
+  text-align: center;
+}
+
+#info .info-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+#info .info-detail a {
+  display: flex;
+  gap: 20px;
+  color: white;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+#info .info-detail a i {
+  font-size: 1.6rem;
 }
 
 /*========================== AUDIO ==========================*/

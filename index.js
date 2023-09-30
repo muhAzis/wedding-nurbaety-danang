@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const menuContainer = document.querySelector('#navbar #navbarMenu');
   const menuList = document.querySelectorAll('#navbar #navbarMenu li');
   const hamburgerMenu = document.getElementById('hamburgerMenu');
+  const infoBtn = document.getElementById('menu7');
 
   const storyCardContainer = document.querySelectorAll('#loveStory .story-card');
   const storyImgContainer = document.querySelectorAll('#loveStory .story-card .col1');
@@ -43,6 +44,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const music = document.querySelector('#BGM');
   const toggleMusicBtn = document.querySelector('#audio-container .icon-container');
   const musicIcon = document.querySelector('#audio-container .icon-container i');
+
+  const infoPage = document.getElementById('info');
+  const infoCloseBtn = document.querySelector('#info .close-btn');
 
   // DATE COUNTDOWN
   setInterval(() => {
@@ -333,5 +337,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   closeBtn.addEventListener('click', () => {
     carouselContainer.style.display = 'none';
+  });
+
+  // TOGGLE INFO PAGE
+  infoBtn.addEventListener('click', () => {
+    infoPage.classList.add('show');
+  });
+
+  infoCloseBtn.addEventListener('click', () => {
+    infoPage.classList.remove('show');
   });
 });
