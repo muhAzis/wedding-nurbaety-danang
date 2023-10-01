@@ -898,6 +898,7 @@ header .row2 {
   margin-top: 50px;
   padding-bottom: 10px;
   color: rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -1303,6 +1304,10 @@ header .row2 {
   }
 
   /*========================== COMMENTS ==========================*/
+
+  #comments .comments-count {
+    width: 92%;
+  }
 
   #comments #commentSection .comments-container {
     padding: 60px 10px;
