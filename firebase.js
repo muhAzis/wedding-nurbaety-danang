@@ -24,6 +24,7 @@ const commentForm = document.getElementById('comment');
 const submitForm = document.getElementById('submitBtn');
 const submitIcon = document.querySelector('#submitBtn lord-icon');
 const commentsContainer = document.querySelector('#comments #commentSection .comments-container');
+const commentsCount = document.querySelector('#comments .comments-count');
 
 // Get data from Firebase
 const getData = async () => {
@@ -35,7 +36,11 @@ const getData = async () => {
     }
 
     const dataComments = Object.keys(data.val()).map((key) => data.val()[key]);
-    dataComments.sort((a, b) => (a.issued < b.issued ? 1 : -1)); //sort by latest posting date
+    dataComments.sort((a, b) => {
+      const issued_a = new Date(a.issued).toISOString();
+      const issued_b = new Date(b.issued).toISOString();
+      return issued_a < issued_b ? 1 : -1;
+    }); //sort by latest posting date
 
     commentsContainer.innerHTML = '';
     dataComments.forEach((data) => {
@@ -55,13 +60,14 @@ const getData = async () => {
         </div>
         `;
     });
+
+    commentsCount.innerHTML = `${dataComments.length} Ucapan Terdaftar`;
   });
 };
 
-// setInterval(() => {
-//   getData();
-// }, 1000);
-getData();
+setInterval(() => {
+  getData();
+}, 1000);
 
 // Insert to Firebase
 const insertData = async () => {
